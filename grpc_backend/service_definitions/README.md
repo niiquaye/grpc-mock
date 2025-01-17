@@ -1,0 +1,1 @@
+`python3 -m grpc_tools.protoc -I=./services/service_definitions --python_out=./services/service_definitions/generated --grpc_python_out=./services/service_definitions/generated ./services/service_definitions/multi_service.proto`

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+// Summarizer service
+service Summarizer {
+    rpc SummarizeText (StringRequest) returns (StringResponse);
+}
+
+// Audio generation service
+service Audio {
+    rpc TextToAudioGeneration (StringRequest) returns (MessageResponse);
+}
+
+// Image generation service
+service Image {
+    rpc TextToImageGeneration (StringRequest) returns (MessageResponse);
+}
+
+// Speaker recognition service
+service Speaker {
+    rpc SpeakerRecognition (StringRequest) returns (MessageResponse);
+}
+
+message StringRequest {
+    string text = 1;
+}
+
+message StringResponse {
+    string text = 1;
+}
+
+message MessageResponse {
+    bool success = 1;
+}
